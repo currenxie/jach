@@ -13,8 +13,8 @@ jobs:
 workflows:
   build-test-deploy:
     jobs:
-      - build-and-test:
+      - build-test-deploy:
           context: Github Packages
           filters:
             branches:
-              only: cx
+              only: master
