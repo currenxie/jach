@@ -22,7 +22,7 @@
 
     <groupId>com.afrunt</groupId>
     <artifactId>jach</artifactId>
-    <version>0.2.5.2-SNAPSHOT</version>
+    <version>0.2.5.2-cx-SNAPSHOT</version>
 
     <name>jACH</name>
     <description>Open source library for working with ACH files</description>
@@ -70,13 +70,10 @@
     </dependencies>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>github</id>
+            <name>GitHub Currenxie Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/currenxie/jach</url>
         </repository>
     </distributionManagement>
 
