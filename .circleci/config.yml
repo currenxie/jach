@@ -1,0 +1,20 @@
+version: 2.1
+
+jobs:
+  build-test-deploy:
+    docker:
+      - image: cimg/openjdk:11.0
+    steps:
+      - checkout
+      - run:
+          name: Deploy
+          command: mvn -B -s m2-settings.xml -DGITHUB_USERNAME=${GITHUB_USERNAME} -DGITHUB_TOKEN=${GITHUB_TOKEN} clean deploy
+
+workflows:
+  build-test-deploy:
+    jobs:
+      - build-and-test:
+          context: Github Packages
+          filters:
+            branches:
+              only: cx
